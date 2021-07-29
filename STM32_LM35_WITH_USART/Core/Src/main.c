@@ -80,7 +80,8 @@ void GET_ADC_VALUE()
 
 		if (count == 2 ) count = 0 ;
 	}
-
+	  //adc_value[0] = lm35 -----> RANK1
+	  //adc_value[1] = Vrefin_data -------> RANK2
 	  Vdda = 3.3 * (*Vrefin_cal / (float)adc_value[1]) ;
 
 	  temp_volt = (adc_value[0] / 4095.0) * (Vdda*1000) ;
@@ -92,7 +93,7 @@ void GET_ADC_VALUE()
 
 void SEND_DATA_TO_PC()
 {
-	char data1[100] = "Ortam sicakligi " ;
+	char data1[100] = "Ambient Temperature is " ;
 
 	//HAL_UART_Transmit(&huart3, (uint8_t *)data1, strlen(data1), 250);
 	//HAL_Delay(500);
@@ -100,8 +101,8 @@ void SEND_DATA_TO_PC()
 	itoa(temp,data,10); // convert int to str
 
 
-	strcat(data1,data);
-	strcat(data1," derece \n");
+	strcat(data1,data); // add data to the end of data1
+	strcat(data1," degrees  \n");
 
 	//HAL_UART_Transmit(&huart3, (uint8_t *)data, strlen(data), 250);
 	//HAL_Delay(500);
