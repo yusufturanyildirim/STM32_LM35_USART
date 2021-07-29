@@ -1,0 +1,8 @@
+main.c:72:6:GET_ADC_VALUE	16	static
+main.c:93:6:SEND_DATA_TO_PC	120	static
+main.c:122:5:main	8	static
+main.c:171:6:SystemClock_Config	88	static
+main.c:215:13:MX_ADC1_Init	24	static
+main.c:273:13:MX_USART3_UART_Init	8	static
+main.c:306:13:MX_GPIO_Init	24	static
+main.c:324:6:Error_Handler	4	static,ignoring_inline_asm
