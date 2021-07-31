@@ -47,7 +47,7 @@ ADC_HandleTypeDef hadc1;
 UART_HandleTypeDef huart3;
 
 /* USER CODE BEGIN PV */
-#define Vrefin_cal ((uint16_t *)((uint32_t)0x1FFF7A2A))
+
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -61,6 +61,8 @@ static void MX_USART3_UART_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+
+#define Vrefin_cal ((uint16_t *)((uint32_t)0x1FFF7A2A))
 
 char data[5] ;
 uint16_t adc_value[2] ;
